@@ -199,12 +199,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! evergreen-ui */ "evergreen-ui");
 /* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 
 
 var _jsxFileName = "/Users/prashanttyagi/Documents/hello-next/comps/Contact.js";
+
 
 
 
@@ -228,22 +231,35 @@ function (_Component) {
         padding: 80,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 9
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 10
         },
         __self: this
       }, "Email id - "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 11
         },
         __self: this
-      }, "Phone No - "));
+      }, "Phone No - "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "https://github.com/amitkumar3968/myDevWebsite",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, " Get the Website Code")));
     }
   }]);
 

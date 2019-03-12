@@ -30,6 +30,7 @@ To Dos-
 8. collect data.
 9. Websockets
 10. Add github code link to devsite.
+11. redux integration.
 
 
 Tooling-- tools, ci,
