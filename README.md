@@ -1,3 +1,5 @@
+Not Complete Yet--working on it------
+
 A minimalistic Profile Site built using next.js .
 
 Fork and fill your data in json file, ur profile site is ready.
