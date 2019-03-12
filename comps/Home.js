@@ -1,0 +1,104 @@
+
+import React, { Component } from 'react'
+import Link from 'next/link'
+import Header from '../comps/Header'
+import { Pane, Button, Text, Heading } from 'evergreen-ui'
+import Plx from 'react-plx';
+import Router from 'next/router'
+
+const parallaxData = [
+  {
+    start: 0,
+    end: 700,
+    properties: [
+      {
+        startValue: 1,
+        endValue: 0,
+        property: 'opacity',
+      },
+    ],
+  },
+];
+
+class Home extends Component {
+  render() {
+    return (
+      <Pane>
+        <Pane display="flex" padding={5} background="tint1" borderRadius={3}
+          flex={1} justifyContent='flex-end'
+          elevation={1}
+          position='fixed' width='98%'
+        >
+          <Pane flex={1} alignItems='center' display="flex"  >
+            {/* <Heading marginLeft={20} size={500}>Amit Kumar</Heading> */}
+            <Text>Amit kumar</Text>
+          </Pane>
+          <Pane justifyContent='flex-end' alignItems='flex-end' background='tint1'>
+            {/* Below you can see the marginRight property on a Button. */}
+            <Link href="#Home">
+              <Button appearance="minimal" margin={5}>🏠Home</Button>
+            </Link>
+            <Link href="#Skills">
+              <Button appearance="minimal" margin={5}>Skills</Button>
+            </Link>
+
+            <Link href="#WorkExperience">
+              <Button appearance="minimal" margin={5}>WorkExperience</Button>
+            </Link>
+
+
+            <Link href="#Contact">
+              <Button appearance="minimal" margin={5}>Contact</Button>
+            </Link>
+
+
+
+
+            {/* <li><a className="smoothscroll" href="/About">About</a></li> */}
+            {/* <Button appearance="primary">Primary Button</Button> */}
+          </Pane>
+        </Pane>
+        <Pane display="flex" justifyContent='center' flex={1}
+          alignItems='center' width='100vw' height='100vh'>
+
+          {/* calc(100vh - 40px) */}
+
+          {/* <Plx
+            className='MyAwesomeParallax'
+            parallaxData={parallaxData}
+          >
+            <img flex={1} src={require('../header-background.jpg')} width='100%' style={{ position: 'relative' }} />
+            <h2 flex={1} style={{ position: 'absolute', bottom: '45%', left: '45%', width: '200' }}><span>Some Text</span></h2>
+          </Plx> */}
+          {/* <Text>Mobile Developer(iOS) + MERN💨</Text> */}
+          <Text fontSize={24}>Mobile Developer(iOS) + 🚣MERN</Text>
+
+
+        </Pane>
+      </Pane>
+
+
+
+
+    )
+  }
+}
+// function onClickHandler (href) {
+//   return e => {
+//     alert(href);
+//      e.preventDefault()
+//      Router.push(href)
+//   }
+// }
+
+// const Link = ({ children, href }) => (
+//   <a href={href} onClick={onClickHandler(href)}>
+//     {children}
+//     <style jsx>{`
+//       a {
+//         margin-right: 10px;
+//       }
+//     `}</style>
+//   </a>
+// )
+export default Home;
