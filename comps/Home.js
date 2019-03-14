@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import Header from '../comps/Header'
-import { Pane, Button, Text, Heading } from 'evergreen-ui'
+import { Pane, Button, Text, Heading, Card, Label } from 'evergreen-ui'
 import Plx from 'react-plx';
 import Router from 'next/router'
 
@@ -21,19 +21,30 @@ const parallaxData = [
 ];
 
 class Home extends Component {
+
+  constructor(props) {
+    // alert(props);
+    super();
+  }
+  componentDidMount() {
+    // super.componentDidMount();
+    // alert(userdata.Home.title);
+  }
   render() {
     return (
+
       <Pane>
-        <Pane display="flex" padding={5} background="tint1" borderRadius={3}
+        <Pane display="flex" padding={5} background="white" borderRadius={3}
           flex={1} justifyContent='flex-end'
-          elevation={1}
-          position='fixed' width='98%'
+          elevation={4}
+          position='fixed' width='98%' zIndex={9999}
         >
           <Pane flex={1} alignItems='center' display="flex"  >
             {/* <Heading marginLeft={20} size={500}>Amit Kumar</Heading> */}
-            <Text>Amit kumar</Text>
+            {/* <Text>{userdata.Home.UserName}</Text> */}
+            <Text>{this.props.data.Home.UserName}</Text>
           </Pane>
-          <Pane justifyContent='flex-end' alignItems='flex-end' background='tint1'>
+          <Pane justifyContent='flex-end' alignItems='flex-end'   opacity={1}>
             {/* Below you can see the marginRight property on a Button. */}
             <Link href="#Home">
               <Button appearance="minimal" margin={5}>🏠Home</Button>
@@ -71,7 +82,15 @@ class Home extends Component {
             <h2 flex={1} style={{ position: 'absolute', bottom: '45%', left: '45%', width: '200' }}><span>Some Text</span></h2>
           </Plx> */}
           {/* <Text>Mobile Developer(iOS) + MERN💨</Text> */}
-          <Text fontSize={24}>Mobile Developer(iOS) + 🚣MERN</Text>
+          <Pane>
+            <Pane display="flex" justifyContent='center' flex={1} padding={20}>
+              <Text fontSize={24}>{this.props.data.Home.title}</Text>
+            </Pane>
+            <Pane display="flex" justifyContent='center' flex={1} padding={20}>
+              <Label fontSize={20}>{this.props.data.Home.Subtitle}</Label>
+            </Pane>
+          </Pane>
+
 
 
         </Pane>

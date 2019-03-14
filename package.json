@@ -17,6 +17,7 @@
     "@material-ui/icons": "^3.0.2",
     "chart.js": "^2.7.3",
     "evergreen-ui": "^4.13.1",
+    "moment": "^2.24.0",
     "next": "^8.0.3",
     "next-images": "^1.1.1",
     "react": "^16.8.4",

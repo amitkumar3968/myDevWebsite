@@ -6,16 +6,14 @@ Fork and fill your data in json file, ur profile site is ready.
 
 
 
-    Dependencies and Versions---
-    "@material-ui/core": "^3.9.2",
-    "@material-ui/icons": "^3.0.2",
+ Versions---
+     
     "evergreen-ui": "^4.13.1",
     "next": "^8.0.3",
     "next-images": "^1.1.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-plx": "^1.3.12",
-    "typeface-roboto": "0.0.54"
+    
 
 
 
@@ -31,6 +29,10 @@ To Dos-
 9. Websockets
 10. Add github code link to devsite.
 11. redux integration.
+12. Dockerize.
+13. Add git,linkedIn Url.
+14. Option to dwld CV.
+
 
 
 Tooling-- tools, ci,
@@ -49,6 +51,9 @@ Network - nginx, AWS,
 Docker, Kubernetes.
 
 Mobile Developer(iOS) + MERN💨
+
+tomorrow--
+json data and then pass them to different components.
 
 
 

@@ -8,7 +8,8 @@ import Link from 'next/link'
 import Skills from '../comps/Skills'
 import Contact from '../comps/Contact'
 import WorkExperience from '../comps/WorkExperience'
-
+import userdata from '../comps/userdata.json'
+// import 'semantic-ui-css/semantic.min.css'
 
 
 
@@ -31,18 +32,18 @@ const Index = () => (
     `}</style>
 
     <div id='Home'>
-      <Home />
+      <Home data={userdata} />
     </div>
     <div id='Skills'>
-      <Skills />
+      <Skills data={userdata} />
     </div>
     <div id='WorkExperience'>
-      <WorkExperience />
+      <WorkExperience data={userdata} />
     </div>
-    
+
 
     <div id='Contact'>
-      <Contact />
+      <Contact data={userdata} />
     </div>
 
     <div id='About'>
