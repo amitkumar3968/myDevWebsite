@@ -3,10 +3,16 @@ import { Pane, Button, Text, Heading, Label, Li } from 'evergreen-ui'
 import { ListItem } from 'evergreen-ui/commonjs/typography';
 var moment = require('moment');
 // import { List } from 'semantic-ui-react'
+import ReactGA from 'react-ga';
 
 class WorkExperience extends Component {
     constructor(props) {
-        super();
+        super(props);
+    }
+    componentDidMount() {
+
+        ReactGA.pageview('/Skills');
+
     }
 
     gettimeDuration(startingdate) {
@@ -36,7 +42,7 @@ class WorkExperience extends Component {
         return (
             <Pane width='100vw' height='120vh' padding={80}>
                 <Pane>
-                    <Label>Total Work Experience - {this.gettimeDuration(this.props.data.WorkExperience.firstJobStartingdate)} </Label>
+                    <Label color='#789ff3'>Total Work Experience - {this.gettimeDuration(this.props.data.WorkExperience.firstJobStartingdate)} </Label>
                     <Pane>
                         <Text>Summary ->  iOS - 6+ yrs , ReactNative - 1+ yrs, ReactJS - 1+ yrs </Text>
                     </Pane>

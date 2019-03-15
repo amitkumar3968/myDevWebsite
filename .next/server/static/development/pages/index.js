@@ -201,6 +201,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-ga */ "react-ga");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -211,15 +213,23 @@ var _jsxFileName = "/Users/prashanttyagi/Documents/hello-next/comps/Contact.js";
 
 
 
+
 var Contact =
 /*#__PURE__*/
 function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Contact, _Component);
 
   function Contact(props) {
+    var _this;
+
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Contact);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Contact).call(this)); // this.openlink = this.openlink.bind(this);
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Contact).call(this, props)); // this.openlink = this.openlink.bind(this);
+
+    _this.state = {
+      isShown: false
+    };
+    return _this;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Contact, [{
@@ -231,30 +241,50 @@ function (_Component) {
           {
             //window.alert('message');
             //alert(this.props.data.Contact.github);
+            react_ga__WEBPACK_IMPORTED_MODULE_8___default.a.event({
+              category: 'github',
+              action: 'User Open github homepage'
+            });
             window.open(this.props.data.Contact.github, '_blank'); //console.log(this.props.data.Contact.github);
           }
           break;
 
         case 2:
           {
+            react_ga__WEBPACK_IMPORTED_MODULE_8___default.a.event({
+              category: 'linkedin',
+              action: 'User Open linkedin'
+            });
             window.open(this.props.data.Contact.linkedin, '_blank');
           }
           break;
 
         case 3:
           {
+            react_ga__WEBPACK_IMPORTED_MODULE_8___default.a.event({
+              category: 'mailid',
+              action: 'User Open mailid'
+            });
             window.open(this.props.data.Contact.mailid, '_blank');
           }
           break;
 
         case 4:
           {
+            react_ga__WEBPACK_IMPORTED_MODULE_8___default.a.event({
+              category: 'code',
+              action: 'User Open github code site'
+            });
             window.open(this.props.data.Contact.code, '_blank');
           }
           break;
 
         case 5:
           {
+            react_ga__WEBPACK_IMPORTED_MODULE_8___default.a.event({
+              category: 'CV',
+              action: 'User dwld CV'
+            });
             window.open(this.props.data.Contact.cvdwld, '_blank');
           }
           break;
@@ -264,9 +294,27 @@ function (_Component) {
       }
     }
   }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      react_ga__WEBPACK_IMPORTED_MODULE_8___default.a.pageview('/Skills');
+    }
+  }, {
+    key: "sendtogithubissue",
+    value: function sendtogithubissue() {
+      this.setState({
+        isShown: false
+      }); //console.log('sendtogithubissue');
+
+      react_ga__WEBPACK_IMPORTED_MODULE_8___default.a.event({
+        category: 'Feedback',
+        action: 'User Gone to feedback github site'
+      });
+      window.open(this.props.data.Contact.githubissue, '_blank');
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this = this;
+      var _this2 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Pane"], {
         width: "100vw",
@@ -274,7 +322,7 @@ function (_Component) {
         padding: 80,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 89
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Pane"], {
@@ -288,7 +336,7 @@ function (_Component) {
         borderRadius: 10,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 91
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Pane"], {
@@ -297,77 +345,139 @@ function (_Component) {
         justifyContent: "flex-start",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 93
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 94
         },
         __self: this
       }, this.props.data.Contact.title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 97
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         appearance: "minimal",
         margin: 5,
         onClick: function onClick() {
-          _this.openlink(1);
+          _this2.openlink(1);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 99
         },
         __self: this
       }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         appearance: "minimal",
         margin: 5,
         onClick: function onClick() {
-          _this.openlink(2);
+          _this2.openlink(2);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 102
         },
         __self: this
       }, "LinkedIn"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         appearance: "minimal",
         margin: 5,
         onClick: function onClick() {
-          _this.openlink(3);
+          _this2.openlink(3);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 106
         },
         __self: this
       }, "Mail"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         appearance: "minimal",
         margin: 5,
         onClick: function onClick() {
-          _this.openlink(4);
+          _this2.openlink(4);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 108
         },
         __self: this
       }, "Code"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         appearance: "minimal",
         margin: 5,
         onClick: function onClick() {
-          _this.openlink(5);
+          _this2.openlink(5);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 109
         },
         __self: this
-      }, "Dwld CV"))));
+      }, "Dwld CV"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Pane"], {
+        flex: 1,
+        display: "flex",
+        justifyContent: "center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Dialog"], {
+        isShown: this.state.isShown,
+        title: "Submit Feedback",
+        onCloseComplete: function onCloseComplete() {
+          return _this2.setState({
+            isShown: false
+          });
+        },
+        onConfirm: function onConfirm() {
+          _this2.sendtogithubissue();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Pane"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Paragraph"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 125
+        },
+        __self: this
+      }, this.props.data.Contact.feedbacktitle, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Text"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }, " ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("code", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }, this.props.data.Contact.githubissue))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+        onClick: function onClick() {
+          return _this2.setState({
+            isShown: true
+          });
+        },
+        marginTop: 20,
+        intent: "success",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142
+        },
+        __self: this
+      }, "FeedBack")));
     }
   }]);
 
@@ -467,12 +577,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_plx__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_plx__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-ga */ "react-ga");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
 
 
 var _jsxFileName = "/Users/prashanttyagi/Documents/hello-next/comps/Home.js";
+
 
 
 
@@ -498,13 +611,16 @@ function (_Component) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Home);
 
     // alert(props);
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Home).call(this));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Home).call(this, props));
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Home, [{
     key: "componentDidMount",
-    value: function componentDidMount() {// super.componentDidMount();
+    value: function componentDidMount() {
+      // super.componentDidMount();
       // alert(userdata.Home.title);
+      react_ga__WEBPACK_IMPORTED_MODULE_11___default.a.initialize('UA-136327063-1');
+      react_ga__WEBPACK_IMPORTED_MODULE_11___default.a.pageview('/Home');
     }
   }, {
     key: "render",
@@ -512,7 +628,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 41
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Pane"], {
@@ -528,7 +644,7 @@ function (_Component) {
         zIndex: 9999,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 42
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Pane"], {
@@ -537,13 +653,15 @@ function (_Component) {
         display: "flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 47
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Text"], {
+        fontSize: 18,
+        marginLeft: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 50
         },
         __self: this
       }, this.props.data.Home.UserName)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Pane"], {
@@ -552,14 +670,14 @@ function (_Component) {
         opacity: 1,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 52
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "#Home",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Button"], {
@@ -567,14 +685,14 @@ function (_Component) {
         margin: 5,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 55
         },
         __self: this
       }, "\uD83C\uDFE0Home")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "#Skills",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 57
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Button"], {
@@ -582,26 +700,11 @@ function (_Component) {
         margin: 5,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 58
         },
         __self: this
       }, "Skills")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "#WorkExperience",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Button"], {
-        appearance: "minimal",
-        margin: 5,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
-        },
-        __self: this
-      }, "WorkExperience")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "#Contact",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 61
@@ -615,6 +718,36 @@ function (_Component) {
           lineNumber: 62
         },
         __self: this
+      }, "WorkExperience")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        href: "#Services",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Button"], {
+        appearance: "minimal",
+        margin: 5,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }, "Services")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        href: "#Contact",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Button"], {
+        appearance: "minimal",
+        margin: 5,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
       }, "Contact")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Pane"], {
         display: "flex",
         justifyContent: "center",
@@ -624,13 +757,13 @@ function (_Component) {
         height: "100vh",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 81
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 94
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Pane"], {
@@ -640,14 +773,14 @@ function (_Component) {
         padding: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 95
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Text"], {
         fontSize: 24,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 96
         },
         __self: this
       }, this.props.data.Home.title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Pane"], {
@@ -657,14 +790,14 @@ function (_Component) {
         padding: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 98
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Label"], {
         fontSize: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 99
         },
         __self: this
       }, this.props.data.Home.Subtitle)))));
@@ -695,6 +828,103 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./comps/Services.js":
+/*!***************************!*\
+  !*** ./comps/Services.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! evergreen-ui */ "evergreen-ui");
+/* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+var _jsxFileName = "/Users/prashanttyagi/Documents/hello-next/comps/Services.js";
+
+
+
+var Services =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Services, _Component);
+
+  function Services() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Services);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Services).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Services, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        width: "100vw",
+        height: "100vh",
+        padding: 100,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
+        fontSize: 20,
+        color: "#789ff3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      }, " Things - which i works for "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        margin: 40,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(this.props.data.Services) && this.props.data.Services.map(function (value, index) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["ListItem"], {
+          key: index,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          },
+          __self: this
+        }, value);
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
+        fontSize: 14,
+        color: "#789ff3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, " More to go... "));
+    }
+  }]);
+
+  return Services;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (Services);
+
+/***/ }),
+
 /***/ "./comps/Skills.js":
 /*!*************************!*\
   !*** ./comps/Skills.js ***!
@@ -713,14 +943,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! evergreen-ui */ "evergreen-ui");
 /* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-chartjs-2 */ "react-chartjs-2");
-/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_chartjs_2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-ga */ "react-ga");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-chartjs-2 */ "react-chartjs-2");
+/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_chartjs_2__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
 
 
 var _jsxFileName = "/Users/prashanttyagi/Documents/hello-next/comps/Skills.js";
+
 
 
 
@@ -733,10 +966,15 @@ function (_Component) {
   function Skills(props) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Skills);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Skills).call(this));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Skills).call(this, props));
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Skills, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      react_ga__WEBPACK_IMPORTED_MODULE_7___default.a.pageview('/Skills');
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_6__["Pane"], {
@@ -745,14 +983,14 @@ function (_Component) {
         padding: 80,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 22
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_chartjs_2__WEBPACK_IMPORTED_MODULE_7__["Doughnut"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_chartjs_2__WEBPACK_IMPORTED_MODULE_8__["Doughnut"], {
         data: this.props.data.Skills,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 23
         },
         __self: this
       }));
@@ -789,6 +1027,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var evergreen_ui__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! evergreen-ui/commonjs/typography */ "evergreen-ui/commonjs/typography");
 /* harmony import */ var evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-ga */ "react-ga");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -803,6 +1043,8 @@ var _jsxFileName = "/Users/prashanttyagi/Documents/hello-next/comps/WorkExperien
 var moment = __webpack_require__(/*! moment */ "moment"); // import { List } from 'semantic-ui-react'
 
 
+
+
 var WorkExperience =
 /*#__PURE__*/
 function (_Component) {
@@ -811,10 +1053,15 @@ function (_Component) {
   function WorkExperience(props) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, WorkExperience);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(WorkExperience).call(this));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(WorkExperience).call(this, props));
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(WorkExperience, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      react_ga__WEBPACK_IMPORTED_MODULE_9___default.a.pageview('/Skills');
+    }
+  }, {
     key: "gettimeDuration",
     value: function gettimeDuration(startingdate) {
       // assuming startingdate is of format -- dd/MM/YYYY
@@ -841,75 +1088,76 @@ function (_Component) {
         padding: 80,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
+        color: "#789ff3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 45
         },
         __self: this
       }, "Total Work Experience - ", this.gettimeDuration(this.props.data.WorkExperience.firstJobStartingdate), " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 46
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 47
         },
         __self: this
       }, "Summary ->  iOS - 6+ yrs , ReactNative - 1+ yrs, ReactJS - 1+ yrs "))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         margin: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 52
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 53
         },
         __self: this
       }, " \uD83D\uDCBC Current Company  -- ", this.props.data.WorkExperience.currentCompanydetails.companyname, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 55
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 56
         },
         __self: this
       }, "Position- ", this.props.data.WorkExperience.currentCompanydetails.Position), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 58
         },
         __self: this
       }, "Time Served - ", this.props.data.WorkExperience.currentCompanydetails.JoiningYear), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 60
         },
         __self: this
       }, "Responsibilites-")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         marginLeft: 40,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 63
         },
         __self: this
       }, _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(this.props.data.WorkExperience.currentCompanydetails.rolesandResponsibilty) && this.props.data.WorkExperience.currentCompanydetails.rolesandResponsibilty.map(function (value, index) {
@@ -917,7 +1165,7 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 67
           },
           __self: this
         }, value);
@@ -925,44 +1173,44 @@ function (_Component) {
         margin: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 76
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 77
         },
         __self: this
       }, " \uD83D\uDCBC Last Company  -- ", this.props.data.WorkExperience.secondCompanydetails.companyname, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 79
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 80
         },
         __self: this
       }, "Position- ", this.props.data.WorkExperience.secondCompanydetails.Position), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 82
         },
         __self: this
       }, "Time Served- ", this.props.data.WorkExperience.secondCompanydetails.JoiningYear), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 84
         },
         __self: this
       }, "Responsibilites-")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         marginLeft: 40,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 87
         },
         __self: this
       }, _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(this.props.data.WorkExperience.secondCompanydetails.rolesandResponsibilty) && this.props.data.WorkExperience.secondCompanydetails.rolesandResponsibilty.map(function (value, index) {
@@ -970,7 +1218,7 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 85
+            lineNumber: 91
           },
           __self: this
         }, value);
@@ -978,44 +1226,44 @@ function (_Component) {
         margin: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 99
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 100
         },
         __self: this
       }, " \uD83D\uDCBC First Company  -- ", this.props.data.WorkExperience.firstCompanydetails.companyname, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 102
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 103
         },
         __self: this
       }, "Position- ", this.props.data.WorkExperience.firstCompanydetails.Position), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 105
         },
         __self: this
       }, "Time Served- ", this.props.data.WorkExperience.firstCompanydetails.JoiningYear), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 107
         },
         __self: this
       }, "Responsibilites-")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         marginLeft: 40,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 110
         },
         __self: this
       }, _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(this.props.data.WorkExperience.firstCompanydetails.rolesandResponsibilty) && this.props.data.WorkExperience.firstCompanydetails.rolesandResponsibilty.map(function (value, index) {
@@ -1023,7 +1271,7 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 108
+            lineNumber: 114
           },
           __self: this
         }, value);
@@ -1042,10 +1290,10 @@ function (_Component) {
 /*!*****************************!*\
   !*** ./comps/userdata.json ***!
   \*****************************/
-/*! exports provided: Home, Skills, WorkExperience, Contact, default */
+/*! exports provided: Home, Skills, WorkExperience, Contact, Services, default */
 /***/ (function(module) {
 
-module.exports = {"Home":{"title":"Mobile Developer(iOS) + 🚣MERN","Subtitle":"Started Software Development as 🍎 iOS Developer,Hybrid App(React Native) and Now Going Towards 🕸️ Web Development","UserName":"Amit kumar"},"Skills":{"labels":["iOS","React Native","ReactJS","SQL","C#","NodeJS","MongoDB","Express"],"datasets":[{"data":[5,3,2,2,2,1,1,1],"backgroundColor":["#FF6384","#36A2EB","#FFCE56","#c9def7","#37f0ed","#f6f8d9","#e5c9f8","#fbc3e7"],"hoverBackgroundColor":["#FF6384","#36A2EB","#FFCE56","#c9def7","#37f0ed","#f6f8d9","#e5c9f8","#fbc3e7"]}]},"WorkExperience":{"firstJobStartingdate":"01/06/2011","firstCompanydetails":{"companyname":"Cyberlinks Technologies","companyStayedTime":"2.5 yrs","rolesandResponsibilty":["Ability to ramp up quickly on new technologies and adopt solution from within the company or from the Open Source community.","Customer focused, adapts well in a fast-changing environment.","Knowledge of / experience with unit testing, mocking and dependency injection frameworks.","Knowledge of / experience with application design patterns (MVC/MVVM, etc.).","Work closely with the design and product teams to implement and polish design mocks on a precise, detailed level."],"Position":"Senior Software Engineer","JoiningYear":"June 2011 - Oct 2013"},"secondCompanydetails":{"companyname":"HyTech Professionals India Pvt Ltd","companyStayedTime":"2.5 yrs","rolesandResponsibilty":["Ensure the performance, quality, and responsiveness of applications.","Collaborate with a team to define, design, and ship new features.","Identify and correct bottlenecks and fix bugs.","Help maintain code quality, organization, and automatization."],"Position":"Senior Software Engineer","JoiningYear":"Oct 2013 -Oct 2015"},"currentCompanydetails":{"companyname":"HCL Technologies","companyStayedTime":"3.3 yrs","rolesandResponsibilty":["Collaborate with cross-functional teams to define, design, and ship new features.","Unit-test code for robustness, including edge cases, usability, and general reliability.","Work on bug fixing and improving application performance.","Continuously discover, evaluate, and implement new technologies to maximize development efficiency.","Interact with clients regarding the features and functionality to be developed and deliver the progress report to the client and project manager."],"Position":"Lead Engineer","JoiningYear":"Oct 2015 - Present"}},"Contact":{"title":"Connect me via --","github":"https://github.com/amitkumar3968","linkedin":"https://www.linkedin.com/in/amit-kumar-b581a217/","mailid":"mailto:amitkumar3968@gmail.com","code":"https://github.com/amitkumar3968/myDevWebsite","cvdwld":"http://bit.ly/2T5fzWE"}};
+module.exports = {"Home":{"title":"Mobile Developer(iOS) + 🚣MERN","Subtitle":"Started Software Development as 🍎 iOS Developer,Hybrid App(React Native) and Now Going Towards 🕸️ Web Development","UserName":"Amit kumar"},"Skills":{"labels":["iOS","React Native","ReactJS","SQL","C#","NodeJS","MongoDB","Express"],"datasets":[{"data":[5,3,2,2,2,1,1,1],"backgroundColor":["#FF6384","#36A2EB","#FFCE56","#c9def7","#37f0ed","#f6f8d9","#e5c9f8","#fbc3e7"],"hoverBackgroundColor":["#FF6384","#36A2EB","#FFCE56","#c9def7","#37f0ed","#f6f8d9","#e5c9f8","#fbc3e7"]}]},"WorkExperience":{"firstJobStartingdate":"01/06/2011","firstCompanydetails":{"companyname":"Cyberlinks Technologies","companyStayedTime":"2.5 yrs","rolesandResponsibilty":["Ability to ramp up quickly on new technologies and adopt solution from within the company or from the Open Source community.","Customer focused, adapts well in a fast-changing environment.","Knowledge of / experience with unit testing, mocking and dependency injection frameworks.","Knowledge of / experience with application design patterns (MVC/MVVM, etc.).","Work closely with the design and product teams to implement and polish design mocks on a precise, detailed level."],"Position":"Senior Software Engineer","JoiningYear":"June 2011 - Oct 2013"},"secondCompanydetails":{"companyname":"HyTech Professionals India Pvt Ltd","companyStayedTime":"2.5 yrs","rolesandResponsibilty":["Ensure the performance, quality, and responsiveness of applications.","Collaborate with a team to define, design, and ship new features.","Identify and correct bottlenecks and fix bugs.","Help maintain code quality, organization, and automatization."],"Position":"Senior Software Engineer","JoiningYear":"Oct 2013 -Oct 2015"},"currentCompanydetails":{"companyname":"HCL Technologies","companyStayedTime":"3.3 yrs","rolesandResponsibilty":["Collaborate with cross-functional teams to define, design, and ship new features.","Unit-test code for robustness, including edge cases, usability, and general reliability.","Work on bug fixing and improving application performance.","Continuously discover, evaluate, and implement new technologies to maximize development efficiency.","Interact with clients regarding the features and functionality to be developed and deliver the progress report to the client and project manager."],"Position":"Lead Engineer","JoiningYear":"Oct 2015 - Present"}},"Contact":{"title":"Connect me via --","github":"https://github.com/amitkumar3968","linkedin":"https://www.linkedin.com/in/amit-kumar-b581a217/","mailid":"mailto:amitkumar3968@gmail.com","code":"https://github.com/amitkumar3968/myDevWebsite","cvdwld":"http://bit.ly/2T5fzWE","githubissue":"https://github.com/amitkumar3968/myDevWebsite/issues/new","feedbacktitle":"Please create a issue on Github, and i will look into it. Press confirm to navigate to Github issue site."},"Services":["Build Native iOS Apps.","Build Cross Platform Apps using React Native.","Make websites using React JS.","Free LIC Advisor.","Mobile Development training.","Free Tech Consulting For Start Ups."]};
 
 /***/ }),
 
@@ -3021,6 +3269,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _comps_WorkExperience__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../comps/WorkExperience */ "./comps/WorkExperience.js");
 /* harmony import */ var _comps_userdata_json__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../comps/userdata.json */ "./comps/userdata.json");
 var _comps_userdata_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../comps/userdata.json */ "./comps/userdata.json", 1);
+/* harmony import */ var _comps_Services__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../comps/Services */ "./comps/Services.js");
 var _jsxFileName = "/Users/prashanttyagi/Documents/hello-next/pages/index.js";
 
 
@@ -3034,18 +3283,20 @@ var _jsxFileName = "/Users/prashanttyagi/Documents/hello-next/pages/index.js";
 
  // import 'semantic-ui-css/semantic.min.css'
 
+
+
 var Index = function Index() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "jsx-99424967",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -3054,7 +3305,7 @@ var Index = function Index() {
     className: "jsx-99424967",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -3062,25 +3313,25 @@ var Index = function Index() {
     className: "jsx-99424967",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "99424967",
     __self: this
-  }, "body{background:#fff;font:16px menlo;color:#fff;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9wcmFzaGFudHR5YWdpL0RvY3VtZW50cy9oZWxsby1uZXh0L3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXlCdUIsQUFHeUIsZ0JBQ0EsZ0JBQ0wsV0FDYiIsImZpbGUiOiIvVXNlcnMvcHJhc2hhbnR0eWFnaS9Eb2N1bWVudHMvaGVsbG8tbmV4dC9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnXG5pbXBvcnQgSG9tZSBmcm9tICcuLi9jb21wcy9Ib21lJ1xuaW1wb3J0IEFib3V0IGZyb20gJy4uL2NvbXBzL0Fib3V0J1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wcy9IZWFkZXInO1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuaW1wb3J0IFNraWxscyBmcm9tICcuLi9jb21wcy9Ta2lsbHMnXG5pbXBvcnQgQ29udGFjdCBmcm9tICcuLi9jb21wcy9Db250YWN0J1xuaW1wb3J0IFdvcmtFeHBlcmllbmNlIGZyb20gJy4uL2NvbXBzL1dvcmtFeHBlcmllbmNlJ1xuaW1wb3J0IHVzZXJkYXRhIGZyb20gJy4uL2NvbXBzL3VzZXJkYXRhLmpzb24nXG4vLyBpbXBvcnQgJ3NlbWFudGljLXVpLWNzcy9zZW1hbnRpYy5taW4uY3NzJ1xuXG5cblxuXG5jb25zdCBJbmRleCA9ICgpID0+IChcblxuICA8ZGl2PlxuICAgIDxIZWFkPlxuICAgICAgPG1ldGFcbiAgICAgICAgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIm1pbmltdW0tc2NhbGU9MSwgaW5pdGlhbC1zY2FsZT0xLCB3aWR0aD1kZXZpY2Utd2lkdGgsIHNocmluay10by1maXQ9bm9cIlxuICAgICAgPjwvbWV0YT5cbiAgICAgIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG4gICAgPC9IZWFkPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHsgXG4gICAgICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgICAgIGZvbnQ6IDE2cHggbWVubG87XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cblxuICAgIDxkaXYgaWQ9J0hvbWUnPlxuICAgICAgPEhvbWUgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBpZD0nU2tpbGxzJz5cbiAgICAgIDxTa2lsbHMgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBpZD0nV29ya0V4cGVyaWVuY2UnPlxuICAgICAgPFdvcmtFeHBlcmllbmNlIGRhdGE9e3VzZXJkYXRhfSAvPlxuICAgIDwvZGl2PlxuXG5cbiAgICA8ZGl2IGlkPSdDb250YWN0Jz5cbiAgICAgIDxDb250YWN0IGRhdGE9e3VzZXJkYXRhfSAvPlxuICAgIDwvZGl2PlxuXG4gICAgPGRpdiBpZD0nQWJvdXQnPlxuICAgICAgPEFib3V0IC8+XG4gICAgPC9kaXY+XG5cblxuXG4gIDwvZGl2PlxuXG5cbilcblxuZXhwb3J0IGRlZmF1bHQgSW5kZXgiXX0= */\n/*@ sourceURL=/Users/prashanttyagi/Documents/hello-next/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, "body{background:#fff;font:16px menlo;color:#fff;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9wcmFzaGFudHR5YWdpL0RvY3VtZW50cy9oZWxsby1uZXh0L3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQTBCdUIsQUFHeUIsZ0JBQ0EsZ0JBQ0wsV0FDYiIsImZpbGUiOiIvVXNlcnMvcHJhc2hhbnR0eWFnaS9Eb2N1bWVudHMvaGVsbG8tbmV4dC9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnXG5pbXBvcnQgSG9tZSBmcm9tICcuLi9jb21wcy9Ib21lJ1xuaW1wb3J0IEFib3V0IGZyb20gJy4uL2NvbXBzL0Fib3V0J1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wcy9IZWFkZXInO1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuaW1wb3J0IFNraWxscyBmcm9tICcuLi9jb21wcy9Ta2lsbHMnXG5pbXBvcnQgQ29udGFjdCBmcm9tICcuLi9jb21wcy9Db250YWN0J1xuaW1wb3J0IFdvcmtFeHBlcmllbmNlIGZyb20gJy4uL2NvbXBzL1dvcmtFeHBlcmllbmNlJ1xuaW1wb3J0IHVzZXJkYXRhIGZyb20gJy4uL2NvbXBzL3VzZXJkYXRhLmpzb24nXG4vLyBpbXBvcnQgJ3NlbWFudGljLXVpLWNzcy9zZW1hbnRpYy5taW4uY3NzJ1xuaW1wb3J0IFNlcnZpY2VzIGZyb20gJy4uL2NvbXBzL1NlcnZpY2VzJ1xuXG5cblxuXG5jb25zdCBJbmRleCA9ICgpID0+IChcblxuICA8ZGl2PlxuICAgIDxIZWFkPlxuICAgICAgPG1ldGFcbiAgICAgICAgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIm1pbmltdW0tc2NhbGU9MSwgaW5pdGlhbC1zY2FsZT0xLCB3aWR0aD1kZXZpY2Utd2lkdGgsIHNocmluay10by1maXQ9bm9cIlxuICAgICAgPjwvbWV0YT5cbiAgICAgIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG4gICAgPC9IZWFkPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHsgXG4gICAgICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgICAgIGZvbnQ6IDE2cHggbWVubG87XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cblxuICAgIDxkaXYgaWQ9J0hvbWUnPlxuICAgICAgPEhvbWUgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBpZD0nU2tpbGxzJz5cbiAgICAgIDxTa2lsbHMgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBpZD0nV29ya0V4cGVyaWVuY2UnPlxuICAgICAgPFdvcmtFeHBlcmllbmNlIGRhdGE9e3VzZXJkYXRhfSAvPlxuICAgIDwvZGl2PlxuXG4gICAgPGRpdiBpZD0nU2VydmljZXMnPlxuICAgICAgPFNlcnZpY2VzIGRhdGE9e3VzZXJkYXRhfSAvPlxuICAgIDwvZGl2PlxuXG5cbiAgICA8ZGl2IGlkPSdDb250YWN0Jz5cbiAgICAgIDxDb250YWN0IGRhdGE9e3VzZXJkYXRhfSAvPlxuICAgIDwvZGl2PlxuXG4gICAgey8qIDxkaXYgaWQ9J0Fib3V0Jz5cbiAgICAgIDxBYm91dCAvPlxuICAgIDwvZGl2PiAqL31cblxuXG5cbiAgPC9kaXY+XG5cblxuKVxuXG5leHBvcnQgZGVmYXVsdCBJbmRleCJdfQ== */\n/*@ sourceURL=/Users/prashanttyagi/Documents/hello-next/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     id: "Home",
     className: "jsx-99424967",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_comps_Home__WEBPACK_IMPORTED_MODULE_3__["default"], {
     data: _comps_userdata_json__WEBPACK_IMPORTED_MODULE_10__,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -3088,14 +3339,14 @@ var Index = function Index() {
     className: "jsx-99424967",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_comps_Skills__WEBPACK_IMPORTED_MODULE_7__["default"], {
     data: _comps_userdata_json__WEBPACK_IMPORTED_MODULE_10__,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -3103,25 +3354,25 @@ var Index = function Index() {
     className: "jsx-99424967",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_comps_WorkExperience__WEBPACK_IMPORTED_MODULE_9__["default"], {
     data: _comps_userdata_json__WEBPACK_IMPORTED_MODULE_10__,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    id: "Contact",
+    id: "Services",
     className: "jsx-99424967",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_comps_Contact__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_comps_Services__WEBPACK_IMPORTED_MODULE_11__["default"], {
     data: _comps_userdata_json__WEBPACK_IMPORTED_MODULE_10__,
     __source: {
       fileName: _jsxFileName,
@@ -3129,17 +3380,18 @@ var Index = function Index() {
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    id: "About",
+    id: "Contact",
     className: "jsx-99424967",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 50
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_comps_About__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_comps_Contact__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    data: _comps_userdata_json__WEBPACK_IMPORTED_MODULE_10__,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   })));
@@ -3378,6 +3630,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-chartjs-2");
+
+/***/ }),
+
+/***/ "react-ga":
+/*!***************************!*\
+  !*** external "react-ga" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-ga");
 
 /***/ }),
 

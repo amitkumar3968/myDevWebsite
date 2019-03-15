@@ -62,8 +62,8 @@
         "Knowledge of / experience with application design patterns (MVC/MVVM, etc.).",
         "Work closely with the design and product teams to implement and polish design mocks on a precise, detailed level."
       ],
-      "Position":"Senior Software Engineer",
-      "JoiningYear":"June 2011 - Oct 2013"
+      "Position": "Senior Software Engineer",
+      "JoiningYear": "June 2011 - Oct 2013"
     },
     "secondCompanydetails": {
       "companyname": "HyTech Professionals India Pvt Ltd",
@@ -74,29 +74,39 @@
         "Identify and correct bottlenecks and fix bugs.",
         "Help maintain code quality, organization, and automatization."
       ],
-      "Position":"Senior Software Engineer",
-      "JoiningYear":"Oct 2013 -Oct 2015"
+      "Position": "Senior Software Engineer",
+      "JoiningYear": "Oct 2013 -Oct 2015"
     },
     "currentCompanydetails": {
       "companyname": "HCL Technologies",
       "companyStayedTime": "3.3 yrs",
       "rolesandResponsibilty": [
-          "Collaborate with cross-functional teams to define, design, and ship new features.",
-          "Unit-test code for robustness, including edge cases, usability, and general reliability.",
-          "Work on bug fixing and improving application performance.",
-          "Continuously discover, evaluate, and implement new technologies to maximize development efficiency.",
-          "Interact with clients regarding the features and functionality to be developed and deliver the progress report to the client and project manager."
+        "Collaborate with cross-functional teams to define, design, and ship new features.",
+        "Unit-test code for robustness, including edge cases, usability, and general reliability.",
+        "Work on bug fixing and improving application performance.",
+        "Continuously discover, evaluate, and implement new technologies to maximize development efficiency.",
+        "Interact with clients regarding the features and functionality to be developed and deliver the progress report to the client and project manager."
       ],
-      "Position":"Lead Engineer",
-      "JoiningYear":"Oct 2015 - Present"
+      "Position": "Lead Engineer",
+      "JoiningYear": "Oct 2015 - Present"
     }
   },
   "Contact": {
-      "title":"Connect me via --",
-      "github":"https://github.com/amitkumar3968",
-      "linkedin":"https://www.linkedin.com/in/amit-kumar-b581a217/",
-      "mailid":"mailto:amitkumar3968@gmail.com",
-      "code":"https://github.com/amitkumar3968/myDevWebsite",
-      "cvdwld":"http://bit.ly/2T5fzWE"
-  }
+    "title": "Connect me via --",
+    "github": "https://github.com/amitkumar3968",
+    "linkedin": "https://www.linkedin.com/in/amit-kumar-b581a217/",
+    "mailid": "mailto:amitkumar3968@gmail.com",
+    "code": "https://github.com/amitkumar3968/myDevWebsite",
+    "cvdwld": "http://bit.ly/2T5fzWE",
+    "githubissue":"https://github.com/amitkumar3968/myDevWebsite/issues/new",
+    "feedbacktitle":"Please create a issue on Github, and i will look into it. Press confirm to navigate to Github issue site."
+  },
+  "Services": [
+    "Build Native iOS Apps.",
+    "Build Cross Platform Apps using React Native.",
+    "Make websites using React JS.",
+    "Free LIC Advisor.",
+    "Mobile Development training.",
+    "Free Tech Consulting For Start Ups."
+  ]
 }

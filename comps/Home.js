@@ -6,6 +6,8 @@ import { Pane, Button, Text, Heading, Card, Label } from 'evergreen-ui'
 import Plx from 'react-plx';
 import Router from 'next/router'
 
+import ReactGA from 'react-ga';
+
 const parallaxData = [
   {
     start: 0,
@@ -24,11 +26,14 @@ class Home extends Component {
 
   constructor(props) {
     // alert(props);
-    super();
+    super(props);
   }
   componentDidMount() {
     // super.componentDidMount();
     // alert(userdata.Home.title);
+    ReactGA.initialize('UA-136327063-1');
+    ReactGA.pageview('/Home');
+    
   }
   render() {
     return (
@@ -42,7 +47,7 @@ class Home extends Component {
           <Pane flex={1} alignItems='center' display="flex"  >
             {/* <Heading marginLeft={20} size={500}>Amit Kumar</Heading> */}
             {/* <Text>{userdata.Home.UserName}</Text> */}
-            <Text>{this.props.data.Home.UserName}</Text>
+            <Text fontSize={18} marginLeft={20}>{this.props.data.Home.UserName}</Text>
           </Pane>
           <Pane justifyContent='flex-end' alignItems='flex-end'   opacity={1}>
             {/* Below you can see the marginRight property on a Button. */}
@@ -56,6 +61,10 @@ class Home extends Component {
             <Link href="#WorkExperience">
               <Button appearance="minimal" margin={5}>WorkExperience</Button>
             </Link>
+            <Link href="#Services">
+              <Button appearance="minimal" margin={5}>Services</Button>
+            </Link>
+            
 
 
             <Link href="#Contact">

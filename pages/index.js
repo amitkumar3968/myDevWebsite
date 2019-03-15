@@ -10,6 +10,7 @@ import Contact from '../comps/Contact'
 import WorkExperience from '../comps/WorkExperience'
 import userdata from '../comps/userdata.json'
 // import 'semantic-ui-css/semantic.min.css'
+import Services from '../comps/Services'
 
 
 
@@ -41,14 +42,18 @@ const Index = () => (
       <WorkExperience data={userdata} />
     </div>
 
+    <div id='Services'>
+      <Services data={userdata} />
+    </div>
+
 
     <div id='Contact'>
       <Contact data={userdata} />
     </div>
 
-    <div id='About'>
+    {/* <div id='About'>
       <About />
-    </div>
+    </div> */}
 
 
 
