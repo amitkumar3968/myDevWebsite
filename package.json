@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "keywords": [],
   "author": "",
@@ -15,11 +16,11 @@
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
+    "@zeit/next-css": "^1.0.1",
     "chart.js": "^2.7.3",
     "evergreen-ui": "^4.13.1",
-    "moment": "^2.24.0",
+    "moment": "^2.24.0",  
     "next": "^8.0.3",
-    "next-images": "^1.1.1",
     "react": "^16.8.4",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.8.4",

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Pane, Button, Text, Heading, Dialog, Paragraph,code } from 'evergreen-ui'
+import { Pane, Button, Text, Heading, Dialog, Paragraph, code } from 'evergreen-ui'
 import Link from 'next/link'
 
 import ReactGA from 'react-ga';
@@ -118,14 +118,14 @@ class Contact extends Component {
                     <Dialog
                         isShown={this.state.isShown}
                         title="Submit Feedback"
-                        onCloseComplete={() =>  this.setState({ isShown: false })}
-                        onConfirm={() => {this.sendtogithubissue()}}
+                        onCloseComplete={() => this.setState({ isShown: false })}
+                        onConfirm={() => { this.sendtogithubissue() }}
                     >
                         <Pane>
-                            <Paragraph>{this.props.data.Contact.feedbacktitle} 
-                            <Text> <code>{this.props.data.Contact.githubissue}</code></Text>
+                            <Paragraph>{this.props.data.Contact.feedbacktitle}
+                                <Text> <code>{this.props.data.Contact.githubissue}</code></Text>
                             </Paragraph>
-                            
+
 
                         </Pane>
 
