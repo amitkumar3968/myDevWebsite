@@ -33,7 +33,7 @@ class Home extends Component {
     // alert(userdata.Home.title);
     ReactGA.initialize('UA-136327063-1');
     ReactGA.pageview('/Home');
-    
+
   }
   render() {
     return (
@@ -49,7 +49,7 @@ class Home extends Component {
             {/* <Text>{userdata.Home.UserName}</Text> */}
             <Text fontSize={18} marginLeft={20}>{this.props.data.Home.UserName}</Text>
           </Pane>
-          <Pane justifyContent='flex-end' alignItems='flex-end'   opacity={1}>
+          <Pane justifyContent='flex-end' alignItems='flex-end' opacity={1}>
             {/* Below you can see the marginRight property on a Button. */}
             <Link href="#Home">
               <Button appearance="minimal" margin={5}>🏠Home</Button>
@@ -64,7 +64,7 @@ class Home extends Component {
             <Link href="#Services">
               <Button appearance="minimal" margin={5}>Services</Button>
             </Link>
-            
+
 
 
             <Link href="#Contact">
