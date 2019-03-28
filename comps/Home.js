@@ -95,8 +95,8 @@ class Home extends Component {
             <Pane display="flex" justifyContent='center' flex={1} padding={20}>
               <Text fontSize={24}>{this.props.data.Home.title}</Text>
             </Pane>
-            <Pane display="flex" justifyContent='center' flex={1} padding={20}>
-              <Label fontSize={20}>{this.props.data.Home.Subtitle}</Label>
+            <Pane display="flex" justifyContent='center' flex={1} padding={10}>
+              <Label fontSize={14}>{this.props.data.Home.Subtitle}</Label>
             </Pane>
           </Pane>
 

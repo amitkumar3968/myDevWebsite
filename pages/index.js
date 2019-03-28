@@ -38,7 +38,7 @@ const Index = () => (
     <div id='Skills'>
       <Skills data={userdata} />
     </div>
-    <div id='WorkExperience'>
+    <div id='WorkExperience'  >
       <WorkExperience data={userdata} />
     </div>
 

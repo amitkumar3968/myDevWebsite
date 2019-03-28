@@ -787,14 +787,14 @@ function (_Component) {
         display: "flex",
         justifyContent: "center",
         flex: 1,
-        padding: 20,
+        padding: 10,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 98
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_8__["Label"], {
-        fontSize: 20,
+        fontSize: 14,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 99
@@ -1084,80 +1084,111 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         width: "100vw",
-        height: "120vh",
-        padding: 80,
+        height: "100vh",
+        paddingTop: 100,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        flex: 1,
+        alignItems: "center",
+        display: "flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 45
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
         color: "#789ff3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 46
         },
         __self: this
-      }, "Total Work Experience - ", this.gettimeDuration(this.props.data.WorkExperience.firstJobStartingdate), " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+      }, "Total Work Experience - ", this.gettimeDuration(this.props.data.WorkExperience.firstJobStartingdate), " ")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 48
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 49
         },
         __self: this
-      }, "Summary ->  iOS - 6+ yrs , ReactNative - 1+ yrs, ReactJS - 1+ yrs "))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
-        margin: 20,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
+      }, "Summary ->  iOS - 6+ yrs , ReactNative - 1+ yrs, ReactJS - 1+ yrs ")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "flex-end",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 53
         },
         __self: this
-      }, " \uD83D\uDCBC Current Company  -- ", this.props.data.WorkExperience.currentCompanydetails.companyname, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        margin: 10,
+        alignself: "center",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 56
         },
         __self: this
-      }, "Position- ", this.props.data.WorkExperience.currentCompanydetails.Position), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 57
         },
         __self: this
-      }, "Time Served - ", this.props.data.WorkExperience.currentCompanydetails.JoiningYear), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
+      }, " \uD83D\uDCBC Current Company"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Text"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 60
         },
         __self: this
-      }, "Responsibilites-")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
-        marginLeft: 40,
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("u", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 61
+        },
+        __self: this
+      }, " ", this.props.data.WorkExperience.currentCompanydetails.companyname))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }, "Position- ", this.props.data.WorkExperience.currentCompanydetails.Position), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, "Time Served - ", this.props.data.WorkExperience.currentCompanydetails.JoiningYear), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }, "Responsibilites-")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        marginLeft: 20,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
         },
         __self: this
       }, _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(this.props.data.WorkExperience.currentCompanydetails.rolesandResponsibilty) && this.props.data.WorkExperience.currentCompanydetails.rolesandResponsibilty.map(function (value, index) {
@@ -1165,52 +1196,70 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 77
           },
           __self: this
         }, value);
       }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
-        margin: 20,
+        margin: 10,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 86
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 87
         },
         __self: this
-      }, " \uD83D\uDCBC Last Company  -- ", this.props.data.WorkExperience.secondCompanydetails.companyname, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+      }, " \uD83D\uDCBC Last Company "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 88
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Text"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("u", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }, this.props.data.WorkExperience.secondCompanydetails.companyname, " "))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 95
         },
         __self: this
       }, "Position- ", this.props.data.WorkExperience.secondCompanydetails.Position), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 97
         },
         __self: this
       }, "Time Served- ", this.props.data.WorkExperience.secondCompanydetails.JoiningYear), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 99
         },
         __self: this
       }, "Responsibilites-")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
-        marginLeft: 40,
+        marginLeft: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 102
         },
         __self: this
       }, _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(this.props.data.WorkExperience.secondCompanydetails.rolesandResponsibilty) && this.props.data.WorkExperience.secondCompanydetails.rolesandResponsibilty.map(function (value, index) {
@@ -1218,52 +1267,70 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 106
           },
           __self: this
         }, value);
       }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
-        margin: 20,
+        margin: 10,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 114
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 115
         },
         __self: this
-      }, " \uD83D\uDCBC First Company  -- ", this.props.data.WorkExperience.firstCompanydetails.companyname, " "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+      }, " \uD83D\uDCBC First Company"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 116
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Text"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("u", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118
+        },
+        __self: this
+      }, "  ", this.props.data.WorkExperience.firstCompanydetails.companyname, " "))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 121
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 122
         },
         __self: this
       }, "Position- ", this.props.data.WorkExperience.firstCompanydetails.Position), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 124
         },
         __self: this
       }, "Time Served- ", this.props.data.WorkExperience.firstCompanydetails.JoiningYear), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui_commonjs_typography__WEBPACK_IMPORTED_MODULE_8__["ListItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 126
         },
         __self: this
       }, "Responsibilites-")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_7__["Pane"], {
-        marginLeft: 40,
+        marginLeft: 20,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 129
         },
         __self: this
       }, _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(this.props.data.WorkExperience.firstCompanydetails.rolesandResponsibilty) && this.props.data.WorkExperience.firstCompanydetails.rolesandResponsibilty.map(function (value, index) {
@@ -1271,11 +1338,11 @@ function (_Component) {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 114
+            lineNumber: 133
           },
           __self: this
         }, value);
-      }))));
+      })))));
     }
   }]);
 
@@ -3319,7 +3386,7 @@ var Index = function Index() {
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "99424967",
     __self: this
-  }, "body{background:#fff;font:16px menlo;color:#fff;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9wcmFzaGFudHR5YWdpL0RvY3VtZW50cy9oZWxsby1uZXh0L3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQTBCdUIsQUFHeUIsZ0JBQ0EsZ0JBQ0wsV0FDYiIsImZpbGUiOiIvVXNlcnMvcHJhc2hhbnR0eWFnaS9Eb2N1bWVudHMvaGVsbG8tbmV4dC9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnXG5pbXBvcnQgSG9tZSBmcm9tICcuLi9jb21wcy9Ib21lJ1xuaW1wb3J0IEFib3V0IGZyb20gJy4uL2NvbXBzL0Fib3V0J1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wcy9IZWFkZXInO1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuaW1wb3J0IFNraWxscyBmcm9tICcuLi9jb21wcy9Ta2lsbHMnXG5pbXBvcnQgQ29udGFjdCBmcm9tICcuLi9jb21wcy9Db250YWN0J1xuaW1wb3J0IFdvcmtFeHBlcmllbmNlIGZyb20gJy4uL2NvbXBzL1dvcmtFeHBlcmllbmNlJ1xuaW1wb3J0IHVzZXJkYXRhIGZyb20gJy4uL2NvbXBzL3VzZXJkYXRhLmpzb24nXG4vLyBpbXBvcnQgJ3NlbWFudGljLXVpLWNzcy9zZW1hbnRpYy5taW4uY3NzJ1xuaW1wb3J0IFNlcnZpY2VzIGZyb20gJy4uL2NvbXBzL1NlcnZpY2VzJ1xuXG5cblxuXG5jb25zdCBJbmRleCA9ICgpID0+IChcblxuICA8ZGl2PlxuICAgIDxIZWFkPlxuICAgICAgPG1ldGFcbiAgICAgICAgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIm1pbmltdW0tc2NhbGU9MSwgaW5pdGlhbC1zY2FsZT0xLCB3aWR0aD1kZXZpY2Utd2lkdGgsIHNocmluay10by1maXQ9bm9cIlxuICAgICAgPjwvbWV0YT5cbiAgICAgIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG4gICAgPC9IZWFkPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHsgXG4gICAgICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgICAgIGZvbnQ6IDE2cHggbWVubG87XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cblxuICAgIDxkaXYgaWQ9J0hvbWUnPlxuICAgICAgPEhvbWUgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBpZD0nU2tpbGxzJz5cbiAgICAgIDxTa2lsbHMgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBpZD0nV29ya0V4cGVyaWVuY2UnPlxuICAgICAgPFdvcmtFeHBlcmllbmNlIGRhdGE9e3VzZXJkYXRhfSAvPlxuICAgIDwvZGl2PlxuXG4gICAgPGRpdiBpZD0nU2VydmljZXMnPlxuICAgICAgPFNlcnZpY2VzIGRhdGE9e3VzZXJkYXRhfSAvPlxuICAgIDwvZGl2PlxuXG5cbiAgICA8ZGl2IGlkPSdDb250YWN0Jz5cbiAgICAgIDxDb250YWN0IGRhdGE9e3VzZXJkYXRhfSAvPlxuICAgIDwvZGl2PlxuXG4gICAgey8qIDxkaXYgaWQ9J0Fib3V0Jz5cbiAgICAgIDxBYm91dCAvPlxuICAgIDwvZGl2PiAqL31cblxuXG5cbiAgPC9kaXY+XG5cblxuKVxuXG5leHBvcnQgZGVmYXVsdCBJbmRleCJdfQ== */\n/*@ sourceURL=/Users/prashanttyagi/Documents/hello-next/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, "body{background:#fff;font:16px menlo;color:#fff;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9wcmFzaGFudHR5YWdpL0RvY3VtZW50cy9oZWxsby1uZXh0L3BhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQTBCdUIsQUFHeUIsZ0JBQ0EsZ0JBQ0wsV0FDYiIsImZpbGUiOiIvVXNlcnMvcHJhc2hhbnR0eWFnaS9Eb2N1bWVudHMvaGVsbG8tbmV4dC9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnXG5pbXBvcnQgSG9tZSBmcm9tICcuLi9jb21wcy9Ib21lJ1xuaW1wb3J0IEFib3V0IGZyb20gJy4uL2NvbXBzL0Fib3V0J1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wcy9IZWFkZXInO1xuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuaW1wb3J0IFNraWxscyBmcm9tICcuLi9jb21wcy9Ta2lsbHMnXG5pbXBvcnQgQ29udGFjdCBmcm9tICcuLi9jb21wcy9Db250YWN0J1xuaW1wb3J0IFdvcmtFeHBlcmllbmNlIGZyb20gJy4uL2NvbXBzL1dvcmtFeHBlcmllbmNlJ1xuaW1wb3J0IHVzZXJkYXRhIGZyb20gJy4uL2NvbXBzL3VzZXJkYXRhLmpzb24nXG4vLyBpbXBvcnQgJ3NlbWFudGljLXVpLWNzcy9zZW1hbnRpYy5taW4uY3NzJ1xuaW1wb3J0IFNlcnZpY2VzIGZyb20gJy4uL2NvbXBzL1NlcnZpY2VzJ1xuXG5cblxuXG5jb25zdCBJbmRleCA9ICgpID0+IChcblxuICA8ZGl2PlxuICAgIDxIZWFkPlxuICAgICAgPG1ldGFcbiAgICAgICAgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIm1pbmltdW0tc2NhbGU9MSwgaW5pdGlhbC1zY2FsZT0xLCB3aWR0aD1kZXZpY2Utd2lkdGgsIHNocmluay10by1maXQ9bm9cIlxuICAgICAgPjwvbWV0YT5cbiAgICAgIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG4gICAgPC9IZWFkPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHsgXG4gICAgICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgICAgIGZvbnQ6IDE2cHggbWVubG87XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cblxuICAgIDxkaXYgaWQ9J0hvbWUnPlxuICAgICAgPEhvbWUgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBpZD0nU2tpbGxzJz5cbiAgICAgIDxTa2lsbHMgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG4gICAgPGRpdiBpZD0nV29ya0V4cGVyaWVuY2UnICA+XG4gICAgICA8V29ya0V4cGVyaWVuY2UgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG5cbiAgICA8ZGl2IGlkPSdTZXJ2aWNlcyc+XG4gICAgICA8U2VydmljZXMgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG5cblxuICAgIDxkaXYgaWQ9J0NvbnRhY3QnPlxuICAgICAgPENvbnRhY3QgZGF0YT17dXNlcmRhdGF9IC8+XG4gICAgPC9kaXY+XG5cbiAgICB7LyogPGRpdiBpZD0nQWJvdXQnPlxuICAgICAgPEFib3V0IC8+XG4gICAgPC9kaXY+ICovfVxuXG5cblxuICA8L2Rpdj5cblxuXG4pXG5cbmV4cG9ydCBkZWZhdWx0IEluZGV4Il19 */\n/*@ sourceURL=/Users/prashanttyagi/Documents/hello-next/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     id: "Home",
     className: "jsx-99424967",
     __source: {

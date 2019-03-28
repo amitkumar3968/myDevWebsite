@@ -11,3 +11,4 @@ Versions---
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
 
+// ,"babel": "babel comps -d dist"

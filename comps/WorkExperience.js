@@ -40,84 +40,105 @@ class WorkExperience extends Component {
 
     render() {
         return (
-            <Pane width='100vw' height='120vh' padding={80}>
-                <Pane>
+            <Pane width='100vw' height='100vh' paddingTop={100}
+            >
+                <Pane flex={1} alignItems='center' display="flex">
                     <Label color='#789ff3'>Total Work Experience - {this.gettimeDuration(this.props.data.WorkExperience.firstJobStartingdate)} </Label>
-                    <Pane>
-                        <Text>Summary ->  iOS - 6+ yrs , ReactNative - 1+ yrs, ReactJS - 1+ yrs </Text>
-                    </Pane>
-
+                </Pane>
+                <Pane>
+                    <Text>Summary ->  iOS - 6+ yrs , ReactNative - 1+ yrs, ReactJS - 1+ yrs </Text>
                 </Pane>
                 {/* // Company listings. */}
-                <Pane margin={20}>
-                    <Label> 💼 Current Company  -- {this.props.data.WorkExperience.currentCompanydetails.companyname} </Label>
 
-                    <Pane>
-                        <ListItem>Position- {this.props.data.WorkExperience.currentCompanydetails.Position}</ListItem>
+                <Pane display="flex" justifyContent='flex-end' alignItems='flex-end' >
 
-                        <ListItem>Time Served - {this.props.data.WorkExperience.currentCompanydetails.JoiningYear}</ListItem>
 
-                        <ListItem>Responsibilites-</ListItem>
+                    <Pane margin={10} alignself='center'>
+                        <Label> 💼 Current Company</Label>
+
+                        <Pane>
+                            <Text>
+                                <u> {this.props.data.WorkExperience.currentCompanydetails.companyname}</u>
+                            </Text>
+                        </Pane>
+
+                        <Pane>
+                            <ListItem>Position- {this.props.data.WorkExperience.currentCompanydetails.Position}</ListItem>
+
+                            <ListItem>Time Served - {this.props.data.WorkExperience.currentCompanydetails.JoiningYear}</ListItem>
+
+                            <ListItem>Responsibilites-</ListItem>
+                        </Pane>
+
+                        <Pane marginLeft={20}>
+                            {Array.isArray(this.props.data.WorkExperience.currentCompanydetails.rolesandResponsibilty) &&
+                                this.props.data.WorkExperience.currentCompanydetails.rolesandResponsibilty.map((value, index) => {
+                                    return (
+                                        <ListItem key={index}>{value}</ListItem>
+                                    )
+                                })
+                            }
+                        </Pane>
                     </Pane>
 
-                    <Pane marginLeft={40}>
-                        {Array.isArray(this.props.data.WorkExperience.currentCompanydetails.rolesandResponsibilty) &&
-                            this.props.data.WorkExperience.currentCompanydetails.rolesandResponsibilty.map((value,index) => {
-                                return (
-                                    <ListItem key={index}>{value}</ListItem>
-                                )
-                            })
-                        }
+                    {/* */}
+
+                    <Pane margin={10}  >
+                        <Label> 💼 Last Company </Label>
+                        <Pane>
+                            <Text>
+                                <u>{this.props.data.WorkExperience.secondCompanydetails.companyname} </u>
+                            </Text>
+                        </Pane>
+
+                        <Pane>
+                            <ListItem>Position- {this.props.data.WorkExperience.secondCompanydetails.Position}</ListItem>
+
+                            <ListItem>Time Served- {this.props.data.WorkExperience.secondCompanydetails.JoiningYear}</ListItem>
+
+                            <ListItem>Responsibilites-</ListItem>
+                        </Pane>
+
+                        <Pane marginLeft={20}>
+                            {Array.isArray(this.props.data.WorkExperience.secondCompanydetails.rolesandResponsibilty) &&
+                                this.props.data.WorkExperience.secondCompanydetails.rolesandResponsibilty.map((value, index) => {
+                                    return (
+                                        <ListItem key={index}>{value}</ListItem>
+                                    )
+                                })
+                            }
+                        </Pane>
                     </Pane>
+
+                    {/* */}
+                    <Pane margin={10}  >
+                        <Label> 💼 First Company</Label>
+                        <Pane>
+                            <Text>
+                                <u>  {this.props.data.WorkExperience.firstCompanydetails.companyname} </u>
+                            </Text>
+                        </Pane>
+                        <Pane>
+                            <ListItem>Position- {this.props.data.WorkExperience.firstCompanydetails.Position}</ListItem>
+
+                            <ListItem>Time Served- {this.props.data.WorkExperience.firstCompanydetails.JoiningYear}</ListItem>
+
+                            <ListItem>Responsibilites-</ListItem>
+                        </Pane>
+
+                        <Pane marginLeft={20}>
+                            {Array.isArray(this.props.data.WorkExperience.firstCompanydetails.rolesandResponsibilty) &&
+                                this.props.data.WorkExperience.firstCompanydetails.rolesandResponsibilty.map((value, index) => {
+                                    return (
+                                        <ListItem key={index}>{value}</ListItem>
+                                    )
+                                })
+                            }
+                        </Pane>
+                    </Pane>
+
+
                 </Pane>
-
-                {/* */}
-
-                <Pane margin={20}>
-                    <Label> 💼 Last Company  -- {this.props.data.WorkExperience.secondCompanydetails.companyname} </Label>
-
-                    <Pane>
-                        <ListItem>Position- {this.props.data.WorkExperience.secondCompanydetails.Position}</ListItem>
-
-                        <ListItem>Time Served- {this.props.data.WorkExperience.secondCompanydetails.JoiningYear}</ListItem>
-
-                        <ListItem>Responsibilites-</ListItem>
-                    </Pane>
-
-                    <Pane marginLeft={40}>
-                        {Array.isArray(this.props.data.WorkExperience.secondCompanydetails.rolesandResponsibilty) &&
-                            this.props.data.WorkExperience.secondCompanydetails.rolesandResponsibilty.map((value,index) => {
-                                return (
-                                    <ListItem key={index}>{value}</ListItem>
-                                )
-                            })
-                        }
-                    </Pane>
-                </Pane>
-
-                {/* */}
-                <Pane margin={20}>
-                    <Label> 💼 First Company  -- {this.props.data.WorkExperience.firstCompanydetails.companyname} </Label>
-
-                    <Pane>
-                        <ListItem>Position- {this.props.data.WorkExperience.firstCompanydetails.Position}</ListItem>
-
-                        <ListItem>Time Served- {this.props.data.WorkExperience.firstCompanydetails.JoiningYear}</ListItem>
-
-                        <ListItem>Responsibilites-</ListItem>
-                    </Pane>
-
-                    <Pane marginLeft={40}>
-                        {Array.isArray(this.props.data.WorkExperience.firstCompanydetails.rolesandResponsibilty) &&
-                            this.props.data.WorkExperience.firstCompanydetails.rolesandResponsibilty.map((value,index) => {
-                                return (
-                                    <ListItem key={index}>{value}</ListItem>
-                                )
-                            })
-                        }
-                    </Pane>
-                </Pane>
-
             </Pane>
 
         )
